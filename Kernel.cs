@@ -9,7 +9,7 @@ namespace sphere_os
     {
         protected override void BeforeRun()
         {
-            Console.WriteLine("< program > Copyright(C) < year >  < name of author >");
+            Console.WriteLine("sphere-os Copyright(C) 2021  Tarith, Dinuda");
             Console.WriteLine("This program comes with ABSOLUTELY NO WARRANTY;  This is free software, and you are welcome to redistribute it");
         }
 
