@@ -6,21 +6,26 @@ using System.Text;
 
 namespace sphere_os.commands
 {
-    class echo : command
+    class Echo : command
     {
         public override void getInfo()
         {
             throw new NotImplementedException();
         }
-        public override void Run(CosmosVFS vfs, filesystem.Dir dir, string[] input)
+
+        public override void Run(CosmosVFS vfs, Dir dir, string[] input)
         {
-            Console.Write("> ");
-            // NOTE: use input variable
-            var input = Console.ReadLine()
-            if (input == "echo ")
+            // input = Console.ReadLine()
+            // if (input.StartsWith("echo ")) { Console.WriteLine(input.Remove(0, 5)); }
+           // Console.WriteLine(Console.ReadLine());
+           /* var read = Console.ReadLine();
+            if (read == "echo ")
             {
-                if (input.StartsWith("echo ")) { Console.WriteLine(input.Remove(0, 5)); }
+                // if (read.StartsWith("echo ")) { Console.WriteLine(read.Remove(0, 5)); }
+                Console.WriteLine(input);
+                Console.WriteLine(read);
             }
+           */
         }
     }
 }
