@@ -15,8 +15,15 @@ namespace sphere_os
 
         protected override void Run()
         {
-            Console.Write("Input: ");
+            Console.Write("$: ");
             var input = Console.ReadLine();
+            switch (input)
+            {
+                // commands here
+                default:
+                    Console.Write("command not found");
+                    break;
+            }
             Console.Write("Text typed: ");
             Console.WriteLine(input);
         }
