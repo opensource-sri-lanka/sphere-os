@@ -29,17 +29,33 @@ namespace sphere_os
 
         protected override void Run()
         {
+            // this will be used to keep track of the current sessions dir
+            filesystem.Dir currentDir = new filesystem.Dir();
+
             // filesytem
             Sys.FileSystem.CosmosVFS fs = new Sys.FileSystem.CosmosVFS();
             Sys.FileSystem.VFS.VFSManager.RegisterVFS(fs);
 
+
             Console.Write("$: ");
             var input = Console.ReadLine();
-            switch (input)
+
+            // tokens
+            var tokens = input.Split(" ");
+
+            switch (tokens[0])
             {
+<<<<<<< HEAD
             
          
             default:
+=======
+                // commands here
+                case "cd":
+                    new commands.CD().Run(fs, currentDir, tokens);
+                    break;
+                default:
+>>>>>>> 23b16451fb59bdab339aeb9e2aeff3006db81d03
                     Console.Write("command not found");
                     break;
             }
