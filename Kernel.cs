@@ -43,9 +43,12 @@ namespace sphere_os
             // tokens
             var tokens = input.Split(" ");
 
-            switch (input)
+            switch (tokens[0])
             {
                 // commands here
+                case "cd":
+                    new commands.CD().Run(fs, currentDir, tokens);
+                    break;
                 default:
                     Console.Write("command not found");
                     break;
