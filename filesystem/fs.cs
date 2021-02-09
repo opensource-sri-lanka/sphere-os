@@ -4,7 +4,12 @@ using System.Text;
 
 namespace sphere_os.filesystem
 {
-   static class Utils
+    public class Dir
+    {
+        public string dir = "/";
+    }
+
+    static class Utils
     {
         public static string[] PathToArray(string p)
         {
