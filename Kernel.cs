@@ -9,7 +9,8 @@ namespace sphere_os
     {
         protected override void BeforeRun()
         {
-            Console.WriteLine("Cosmos booted successfully. Type a line of text to get it echoed back.");
+            Console.WriteLine("< program > Copyright(C) < year >  < name of author >");
+            Console.WriteLine("This program comes with ABSOLUTELY NO WARRANTY;  This is free software, and you are welcome to redistribute it");
         }
 
         protected override void Run()
