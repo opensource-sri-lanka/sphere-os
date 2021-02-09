@@ -45,10 +45,12 @@ namespace sphere_os
 
             switch (tokens[0])
             {            
-            default:
                 // commands here
                 case "cd":
                     new commands.CD().Run(fs, currentDir, tokens);
+                    break;
+                default:
+                    Console.WriteLine("command not found");
                     break;
             }
             Console.Write("Text typed: ");
