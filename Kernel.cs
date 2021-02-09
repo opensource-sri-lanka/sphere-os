@@ -37,8 +37,9 @@ namespace sphere_os
             var input = Console.ReadLine();
             switch (input)
             {
-                // commands here
-                default:
+            
+         
+            default:
                     Console.Write("command not found");
                     break;
             }
