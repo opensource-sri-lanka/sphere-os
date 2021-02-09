@@ -29,6 +29,10 @@ namespace sphere_os
 
         protected override void Run()
         {
+            // filesytem
+            Sys.FileSystem.CosmosVFS fs = new Sys.FileSystem.CosmosVFS();
+            Sys.FileSystem.VFS.VFSManager.RegisterVFS(fs);
+
             Console.Write("$: ");
             var input = Console.ReadLine();
             switch (input)
