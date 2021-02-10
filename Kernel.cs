@@ -26,15 +26,16 @@ namespace sphere_os
 
         protected override void BeforeRun()
         {
-            Console.WriteLine("Sphere OS Copyright(C) 2021  Dinuda Yaggahavita, Tarith Jayasooriya");
-            Console.WriteLine("This program comes with ABSOLUTELY NO WARRANTY;  This is free software, and you are welcome to redistribute it");
-            
+
             // this will be used to keep track of the current sessions dir
             currentDir = new filesystem.Dir();
 
             // filesytem
             fs = new Sys.FileSystem.CosmosVFS();
             Sys.FileSystem.VFS.VFSManager.RegisterVFS(fs);
+
+            Console.WriteLine("Sphere OS Copyright(C) 2021  Dinuda Yaggahavita, Tarith Jayasooriya");
+            Console.WriteLine("This program comes with ABSOLUTELY NO WARRANTY;  This is free software, and you are welcome to redistribute it");
 
         }
 
