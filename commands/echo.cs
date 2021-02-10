@@ -15,17 +15,16 @@ namespace sphere_os.commands
 
         public override void Run(CosmosVFS vfs, Dir dir, string[] input)
         {
-            // input = Console.ReadLine()
-            // if (input.StartsWith("echo ")) { Console.WriteLine(input.Remove(0, 5)); }
-           // Console.WriteLine(Console.ReadLine());
-           /* var read = Console.ReadLine();
-            if (read == "echo ")
+            try
             {
-                // if (read.StartsWith("echo ")) { Console.WriteLine(read.Remove(0, 5)); }
-                Console.WriteLine(input);
-                Console.WriteLine(read);
+                var read = input[1];
+                if (read.StartsWith("echo ")) { Console.WriteLine(read.Remove(0, 5)); }
+                Console.ReadLine();
             }
-           */
+            catch (Exception e)
+            {
+                Console.WriteLine("Command not found " + e.Message);
+            }
         }
     }
 }
