@@ -6,19 +6,19 @@ using System.Text;
 
 namespace sphere_os.commands
 {
-    class Echo : command
+    class echo : command
     {
         public override void getInfo()
         {
             throw new NotImplementedException();
         }
 
-        public override void Run(CosmosVFS vfs, Dir dir, string[] input)
+        public override void Run(CommandInput ci)
         {
             try
             {
-                var read = input[1];
-                if (read.StartsWith("echo ")) { Console.WriteLine(read.Remove(0, 5)); }
+                var echo = ci.input[1];
+                Console.WriteLine(echo.Remove(0, 5));
             }
             catch (Exception e)
             {
