@@ -23,13 +23,21 @@ namespace sphere_os.filesystem
         // Console.WriteLine(d) $ a/b/c
         public static string GoBackADir(string dir)
         {
+
             string[] a = PathToArray(dir);
-            if (a.Length == 1)
+            Console.WriteLine(a.Length);
+            var v = "";
+
+            for (var i = 0; i < a.Length; i++)
             {
-                return "/";
+                var divider = "";
+                if (i != 1)
+                {
+                    divider = "/";
+                }
+                v += divider + a[i];
             }
-            dir = a[a.Length - 1];
-            return dir;
+            return v;
         }
     }
 
