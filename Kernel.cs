@@ -55,6 +55,12 @@ namespace sphere_os
                 case "echo":
                     new commands.echo().Run(ci);
                     break;
+                case "shutdown":
+                    new commands.Shutdown().Run(ci);
+                    break;
+                case "mkdir":
+                    new commands.Mkdir().Run(ci);
+                    break;
                 default:
                     Console.WriteLine("command not found");
                     break;
