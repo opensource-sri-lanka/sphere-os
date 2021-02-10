@@ -17,8 +17,17 @@ namespace sphere_os.commands
         {
             try
             {
-                var echo = ci.input[1];
-                Console.WriteLine(echo.Remove(0, 5));
+                for (var i = 1; i < ci.input.Length; i++)
+                {
+                    if (i == 1)
+                    {
+                        Console.Write(ci.input[i]);
+                    } else
+                    {
+                        Console.Write(" "+ci.input[i]);
+                    }
+                }
+                Console.WriteLine();
             }
             catch (Exception e)
             {
