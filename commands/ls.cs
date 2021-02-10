@@ -17,6 +17,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace sphere_os.commands
 {
     class Ls : command
@@ -31,10 +32,18 @@ namespace sphere_os.commands
             try
             {
                 var l = ci.vfs.GetDirectory("/");
-                var output = System.IO.Directory.GetDirectories(ci.dir.dir);
-                foreach (var i in output)
+                var output = new System.IO.DirectoryInfo(ci.dir.dir);
+
+                // files
+                foreach (var i in output.GetFiles())
                 {
-                    Console.WriteLine(i);
+                    Console.WriteLine("name: " + i.Name + " type: file " + "size: " + i.Length);
+                }
+
+                // directories
+                foreach (var i in output.GetDirectories())
+                {
+                    Console.WriteLine("name: " + i.Name + " type: dir " + "size: N/A");
                 }
             }
             catch (Exception e)
