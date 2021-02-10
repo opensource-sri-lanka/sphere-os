@@ -6,7 +6,7 @@ the sytax of a commit message:
 
 main commit types -
 	fix - fixes
-	feat - new features
+	feat - new features/updates
 	doc - doc changes or additions
 	other - cant be categorized
 	codeDoc - code comments that describe code
