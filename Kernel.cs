@@ -61,6 +61,9 @@ namespace sphere_os
                 case "mkdir":
                     new commands.Mkdir().Run(ci);
                     break;
+                case "mkfile":
+                    new commands.Mkfile().Run(ci);
+                    break;
                 default:
                     Console.WriteLine("command not found");
                     break;
