@@ -54,6 +54,9 @@ namespace sphere_os
                 case "echo":
                     new commands.echo().Run(ci);
                     break;
+                case "ls":
+                    new commands.Ls().Run(ci);
+                    break;
                 case "shutdown":
                     new commands.Shutdown().Run(ci);
                     break;
