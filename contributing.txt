@@ -8,7 +8,7 @@ main commit types -
 	fix - fixes
 	feat - new features/updates
 	doc - doc changes or additions
-	other - cant be categorized
+	other - can not be categorized
 	codeDoc - code comments that describe code
 
 commit types -
