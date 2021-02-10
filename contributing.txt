@@ -11,6 +11,7 @@ main commit types -
 	other - can not be categorized
 	codeDoc - code comments that describe code
 
+
 commit types -
 	kernel - changes to kernel
 	commands - changes to commands
