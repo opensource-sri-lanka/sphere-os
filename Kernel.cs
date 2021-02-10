@@ -42,7 +42,6 @@ namespace sphere_os
         {
             Console.Write(currentDir.dir+": ");
             var input = Console.ReadLine();
-
             // tokens
             var tokens = input.Split(" ");
             var ci = new CommandInput { dir = currentDir, input = tokens, vfs = fs };
