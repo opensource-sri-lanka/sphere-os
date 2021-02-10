@@ -12,12 +12,12 @@ namespace sphere_os.commands
             throw new NotImplementedException();
         }
 
-        public override void Run(CosmosVFS vfs, filesystem.Dir dir, string[] input)
+        public override void Run(CommandInput ci)
         {
             try
             {
-                var fDir = input[1];
-                var d = vfs.GetDirectory(fDir);
+                var fDir = ci.input[1];
+                var d = ci.vfs.GetDirectory(fDir);
             }
             catch (Exception e)
             {
@@ -25,7 +25,7 @@ namespace sphere_os.commands
             }
             finally
             {
-                dir.dir = dir + "/" + input[1];
+                ci.dir.dir = ci.dir.dir + "/" + ci.input[1];
             }
         }
     }

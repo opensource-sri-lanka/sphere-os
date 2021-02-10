@@ -21,38 +21,41 @@ namespace sphere_os
 {
     public class Kernel : Sys.Kernel
     {
+        filesystem.Dir currentDir;
+        Sys.FileSystem.CosmosVFS fs;
+
         protected override void BeforeRun()
         {
             Console.WriteLine("Sphere OS Copyright(C) 2021  Dinuda Yaggahavita, Tarith Jayasooriya");
             Console.WriteLine("This program comes with ABSOLUTELY NO WARRANTY;  This is free software, and you are welcome to redistribute it");
+            
+            // this will be used to keep track of the current sessions dir
+            currentDir = new filesystem.Dir();
+
+            // filesytem
+            fs = new Sys.FileSystem.CosmosVFS();
+            Sys.FileSystem.VFS.VFSManager.RegisterVFS(fs);
+
         }
 
         protected override void Run()
         {
-            // this will be used to keep track of the current sessions dir
-            filesystem.Dir currentDir = new filesystem.Dir();
-
-            // filesytem
-            Sys.FileSystem.CosmosVFS fs = new Sys.FileSystem.CosmosVFS();
-            Sys.FileSystem.VFS.VFSManager.RegisterVFS(fs);
-
-
-            Console.Write("$: ");
+            Console.Write(currentDir.dir+": ");
             var input = Console.ReadLine();
 
             // tokens
             var tokens = input.Split(" ");
-
+            var ci = new CommandInput { dir = currentDir, input = tokens, vfs = fs };
             switch (tokens[0])
             {            
-            default:
                 // commands here
                 case "cd":
-                    new commands.CD().Run(fs, currentDir, tokens);
+                    new commands.CD().Run(ci);
+                    break;
+                default:
+                    Console.WriteLine("command not found");
                     break;
             }
-            Console.Write("Text typed: ");
-            Console.WriteLine(input);
         }
     }
 }
