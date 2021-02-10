@@ -74,6 +74,7 @@ namespace sphere_os
                     Console.WriteLine("command not found");
                     break;
             }
+            Console.WriteLine();
         }
     }
 }
