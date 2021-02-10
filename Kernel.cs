@@ -52,6 +52,9 @@ namespace sphere_os
                 case "cd":
                     new commands.CD().Run(ci);
                     break;
+                case "echo":
+                    new commands.echo().Run(ci);
+                    break;
                 default:
                     Console.WriteLine("command not found");
                     break;
