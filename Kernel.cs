@@ -70,6 +70,9 @@ namespace sphere_os
                 case "clear":
                     new commands.Clear().Run(ci);
                     break;
+                case "read":
+                    new commands.Read().Run(ci);
+                    break;
                 default:
                     Console.WriteLine("command not found");
                     break;
