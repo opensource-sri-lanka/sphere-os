@@ -16,10 +16,12 @@ namespace sphere_os.commands
         {
             try
             {
-                var input = ci.input[0];
-                var cDir = ci.dir;
                 var l = ci.vfs.GetDirectory("/");
-                Console.WriteLine(l);
+                var output = System.IO.Directory.GetDirectories(ci.dir.dir);
+                foreach (var i in output)
+                {
+                    Console.WriteLine(i);
+                }
             }
             catch (Exception e)
             {
