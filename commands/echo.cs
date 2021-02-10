@@ -19,7 +19,6 @@ namespace sphere_os.commands
             {
                 var read = input[1];
                 if (read.StartsWith("echo ")) { Console.WriteLine(read.Remove(0, 5)); }
-                Console.ReadLine();
             }
             catch (Exception e)
             {
